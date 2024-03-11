@@ -34,10 +34,10 @@ It saves to a hidden file in your home directory, specifically, `~/.wificnt/wifi
 
 </details>
 
-## Installation
+# Installation
 **[NETWORKMANAGER](https://archlinux.org/packages/extra/x86_64/networkmanager/) MUST BE INSTALLED**
 
-# Option 1: Shell
+## Option 1: Shell
 
 - Install the repository
 
@@ -58,7 +58,7 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-# Option 2: Manual
+## Option 2: Manual
 
 - Install the dependencies
 
@@ -108,7 +108,7 @@ mv ~/wificnt/wificon /usr/local/bin
 ``` 
 *Your path may be different*
 
-## To-do 
+# To-do 
 
 - Include a way to save multiple SSID's and SSID password's at once. 
 - Include functionality for all linux distrobutions for setup.sh
