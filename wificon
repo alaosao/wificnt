@@ -1,11 +1,8 @@
 #!/bin/bash
 
-SSID=$WIFI_SSID
-PASSWORD=$WIFI_PASSWORD
+# Read SSID and password from ~/.wificnt/wifi.md file
+ssid=$(grep -oP '(?<=SSID = ").*(?=")' ~/.wificnt/wifi.md)
+password=$(grep -oP '(?<=PASSWORD = ").*(?=")' ~/.wificnt/wifi.md)
 
-if [ -z "$SSID" ] || [ -z "$PASSWORD" ]; then
-    echo "SSID or password is not set. Please run 'wifirand' first."
-    exit 1
-fi
-
-nmcli device wifi connect "$SSID" password "$PASSWORD"
+# Connect to Wi-Fi network
+nmcli device wifi connect "$ssid" password "$password"
