@@ -1,0 +1,11 @@
+#!/bin/bash
+
+SSID=$WIFI_SSID
+PASSWORD=$WIFI_PASSWORD
+
+if [ -z "$SSID" ] || [ -z "$PASSWORD" ]; then
+    echo "SSID or password is not set. Please run 'wifirand' first."
+    exit 1
+fi
+
+nmcli device wifi connect "$SSID" password "$PASSWORD"
